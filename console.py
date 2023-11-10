@@ -24,7 +24,7 @@ class HBNBCommand(cmd.Cmd):
     def emptyline(self):
         """Do nothing upon receiving an empty line."""
         pass
-      def do_create(self, arg):
+    def do_create(self, arg):
         """Usage: create <class>
         Create a new class instance and print its id.
         """
@@ -112,10 +112,7 @@ def do_update(self, arg):
         print("** attribute name missing **")
         return False
     if len(argl) == 3:
-        try:
-            type(eval(argl[2])) != dict
-        except NameError:
-            print("** value missing **")
+        print("** value missing **")
             return False
 
     if len(argl) == 4:
