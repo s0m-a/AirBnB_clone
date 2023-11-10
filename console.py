@@ -113,7 +113,7 @@ def do_update(self, arg):
         return False
     if len(argl) == 3:
         print("** value missing **")
-            return False
+        return False
 
     if len(argl) == 4:
         obj = objdict["{}.{}".format(argl[0], argl[1])]
