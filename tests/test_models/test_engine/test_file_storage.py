@@ -20,7 +20,6 @@ from models.engine.file_storage import FileStorage
 from models.amenity import Amenity
 
 
-
 class TestFileStorage_instin(unittest.TestCase):
     """Unit tests for testing instantiation of the FileStorage class"""
 
