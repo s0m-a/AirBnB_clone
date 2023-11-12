@@ -201,7 +201,7 @@ class TestPlace_to_dict(unittest.TestCase):
 
     def test_to_dict_type(self):
         self.assertTrue(dict, type(Place().to_dict()))
-        
+
     def test_toDictDatetimeAttriStrs(self):
         pl = Place()
         pl_dict = pl.to_dict()

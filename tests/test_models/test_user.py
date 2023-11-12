@@ -12,6 +12,7 @@ from models.user import User
 from datetime import datetime
 from time import sleep
 
+
 class TestUser_instantiation(unittest.TestCase):
     """Unittests for testing instantiation of the User class."""
 
@@ -132,6 +133,7 @@ class TestUser_save(unittest.TestCase):
             data = json.load(f)
             self.assertIn(usid, data)
 
+
 class TestUser_to_dict(unittest.TestCase):
     """Unittests for testing to_dict method of User class."""
 
@@ -180,6 +182,7 @@ class TestUser_to_dict(unittest.TestCase):
         us = User()
         with self.assertRaises(TypeError):
             us.to_dict(None)
+
 
 if __name__ == "__main__":
     unittest.main()
