@@ -60,10 +60,10 @@ class HBNBCommand(cmd.Cmd):
         """Creates an instance"""
         if line == "" or line is None:
             print("** class name missing **")
-        elif line not in storage.classes():
+        elif line not in storage.clses():
             print("** class doesn't exist **")
         else:
-            x = storage.classes()[line]()
+            x = storage.clses()[line]()
             x.save()
             print(x.id)
 
@@ -73,7 +73,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             inputs = line.split(' ')
-            if inputs[0] not in storage.classes():
+            if inputs[0] not in storage.clses():
                 print("** class doesn't exist **")
             elif len(inputs) < 2:
                 print("** instance id missing **")
@@ -90,7 +90,7 @@ class HBNBCommand(cmd.Cmd):
             print("** class name missing **")
         else:
             inputs = line.split(' ')
-            if inputs[0] not in storage.classes():
+            if inputs[0] not in storage.clses():
                 print("** class doesn't exist **")
             elif len(inputs) < 2:
                 print("** instance id missing **")
@@ -115,7 +115,7 @@ class HBNBCommand(cmd.Cmd):
         value = check.group(4)
         if not check:
             print("** class name missing **")
-        elif className not in storage.classes():
+        elif className not in storage.clses():
             print("** class doesn't exist **")
         elif id is None:
             print("** instance id missing **")
@@ -152,7 +152,7 @@ class HBNBCommand(cmd.Cmd):
         """
         if line != "":
             inputs = line.split(' ')
-            if inputs[0] not in storage.classes():
+            if inputs[0] not in storage.clses():
                 print("** class doesn't exist **")
             else:
                 retr = [str(obj) for key, obj in storage.all().items()
