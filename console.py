@@ -1,10 +1,12 @@
-import cmd 
-from models.base_model  import BaseModel
+import cmd
+from models.base_model import BaseModel
 from models import storage
 import re
 
+
 class HBNBCommand(cmd.Cmd):
     prompt = "(hbnb)"
+
     def default(self, line):
         """default cmds when nothing else matches"""
         self._precmd(line)
@@ -39,23 +41,27 @@ class HBNBCommand(cmd.Cmd):
         cmd = methd + " " + className + " " + id + " " + attrnValue
         self.onecmd(cmd)
         return cmd
-    def do_quit(self,line):
+
+    def do_quit(self, line):
         """Quit command to exit the program"""
         print("goodbye")
         return True
-    def do_EOF(self,line):
+
+    def do_EOF(self, line):
         """EOF command to exit the program"""
         print("goodbye")
         return True
+
     def to_help(self):
         print("help is here")
+
     def emptyline(self):
         pass
-    def do_create(self,line):
-        if line == " " or line == None:
+
+    def do_create(self, line):
+        if line == "" or line is None:
             print("class name missing")
 
-    
     def do_create(self, line):
         """Creates an instance"""
         if line == "" or line is None:
@@ -101,6 +107,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     del storage.all()[key]
                     storage.save()
+
     def do_update(self, line):
         """Updates an instance"""
         if line == "" or line is None:
@@ -156,7 +163,7 @@ class HBNBCommand(cmd.Cmd):
                 print("** class doesn't exist **")
             else:
                 retr = [str(obj) for key, obj in storage.all().items()
-                      if type(obj).__name__ == inputs[0]]
+                        if type(obj).__name__ == inputs[0]]
                 print(retr)
         else:
             nlist = [str(obj) for key, obj in storage.all().items()]

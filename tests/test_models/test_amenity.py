@@ -135,6 +135,7 @@ class TestAmenity_save(unittest.TestCase):
         with self.assertRaises(TypeError):
             ame.save(None)
 
+
 class TestAmenity_toDict(unittest.TestCase):
     """Unit tests for testing to_dict method of the Amenity class."""
 
@@ -178,7 +179,7 @@ class TestAmenity_toDict(unittest.TestCase):
     def test_toDictWthArg(self):
         ame = Amenity()
         with self.assertRaises(TypeError):
-            ame.to_dict(None)      
+            ame.to_dict(None)
 
     def testContrastToDictDunderDict(self):
         ame = Amenity()

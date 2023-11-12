@@ -13,6 +13,7 @@ Unit test classes:
     TestCity_to_dict
 """
 
+
 class TestCity_instin(unittest.TestCase):
     """Unit tests for testing instin of the City class"""
 
