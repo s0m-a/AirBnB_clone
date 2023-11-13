@@ -175,7 +175,7 @@ class HBNBCommand(cmd.Cmd):
         inputs = line.split(' ')
         if not inputs[0]:
             print("** class name missing **")
-        elif inputs[0] not in storage.classes():
+        elif inputs[0] not in storage.clses():
             print("** class doesn't exist **")
         else:
             match = [
