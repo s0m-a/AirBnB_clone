@@ -169,6 +169,20 @@ class HBNBCommand(cmd.Cmd):
             nlist = [str(obj) for key, obj in storage.all().items()]
             print(nlist)
 
+    def do_count(self, line):
+        """Counts the object of a class.
+        """
+        inputs = line.split(' ')
+        if not inputs[0]:
+            print("** class name missing **")
+        elif inputs[0] not in storage.classes():
+            print("** class doesn't exist **")
+        else:
+            match = [
+                ki for ki in storage.all() if ki.startswith(
+                    inputs[0] + '.')]
+            print(len(match))
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
