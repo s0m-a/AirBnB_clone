@@ -8,4 +8,5 @@ footer{
     align-items: center;
     line-height: 50px;
     border-top: solid 1px #CCCCCC;
+    position:sticky;
   }
